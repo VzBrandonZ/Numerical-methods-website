@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fresca&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./public/css/biseccion.css"/>
+
+    <script src="https://kit.fontawesome.com/7e73ee931e.js" crossorigin="anonymous"></script>
+    <py-env> 
+        - numpy 
+        - matplotlib 
+        - pandas 
+        - sympy
+        - paths:
+            - ./scripts/biseccion.py
+    </py-env>
+    <title>Bisección</title>
+</head>
+<body>
+    <section class="section-header">
+        <header class="header">
+            <img class="section-header__img" src="./public/img/logoPy.png" alt="Pytho-Logo">
+            <h1>METODO BISECCION</h1>
+            <a href="../index.html">
+                <button>
+                    <span>Menu</span>
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 278.6l-128 128c-12.51 12.51-32.76 12.49-45.25 0c-12.5-12.5-12.5-32.75 0-45.25L402.8 288H32C14.31 288 0 273.7 0 255.1S14.31 224 32 224h370.8l-73.38-73.38c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l128 128C515.1 245.9 515.1 266.1 502.6 278.6z"/></svg>
+                    </div>
+                </button>
+            </a>
+        </header>
+    </section>
+    <div class="content">
+        <section class="section-form">
+            <div class="section-content-form">
+                <form onsubmit="return false" action="post" class="form">
+                    <input type="text" class="form-text" name="entry" id="function" placeholder="funcion: 2*x**3-3*x**2-5">
+                    <input type="text" class="form-text" name="entry" id="setXi" placeholder="ingrese xi">
+                    <input type="text" class="form-text" name="entry" id="setXu" placeholder="Ingrese xu">
+                    <input type="text" class="form-text" name="entry" id="setEps" placeholder="Ingrese Epsilon">
+                    <input type="text" class="form-text" name="entry" id="setLimiteA" placeholder="Ingrese rango a">
+                    <input type="text" class="form-text" name="entry" id="setLimiteB" placeholder="Ingrese rango b">
+                    <div>
+                        <button type="submit" class="button" id="button-AC" pys-onClick="Post"><span>Solución</span></button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <section class="section-get">
+            <div id="getResultado"></div>
+            <div id="getTabla"></div>
+            <div id="getGrafico"></div>
+        </section>
+    </div>
+    <py-script src="./scripts/biseccion.py"> </py-script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
